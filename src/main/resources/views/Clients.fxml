@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" style="-fx-padding: 20px;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isi.java.gestion_bancaire.controllers.ClientController">
+    <Label text="Liste des Clients" style="-fx-font-size: 20px; -fx-text-fill: white;"/>
+
+    <TableView fx:id="tableClients">
+        <columns>
+            <TableColumn fx:id="colNom" text="Nom"/>
+            <TableColumn fx:id="colPrenom" text="Prénom"/>
+            <TableColumn fx:id="colEmail" text="Email"/>
+            <TableColumn fx:id="colTelephone" text="Téléphone"/>
+        </columns>
+    </TableView>
+
+    <TextField fx:id="txtNom" promptText="Nom" />
+    <TextField fx:id="txtPrenom" promptText="Prénom"/>
+    <TextField fx:id="txtEmail" promptText="Email"/>
+    <TextField fx:id="txtTelephone" promptText="Téléphone"/>
+
+
+    <HBox spacing="10">
+        <Button text="Ajouter" fx:id="btnAjouter" onAction="#ajouterClient"/>
+        <Button text="Modifier" fx:id="btnModifier"  onAction="#modifierClient" disable="true"/>
+        <Button text="Supprimer" fx:id="btnSupprimer" onAction="#supprimerClient"/>
+    </HBox>
+</VBox>

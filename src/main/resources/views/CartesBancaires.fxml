@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.control.DatePicker?>
+
+<VBox spacing="10" style="-fx-padding: 20px;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isi.java.gestion_bancaire.controllers.CarteBancaireController">
+    <Label text="Gestion des Cartes Bancaires" style="-fx-font-size: 20px; -fx-text-fill: white;"/>
+
+    <TableView fx:id="tableCartesBancaires">
+        <columns>
+            <TableColumn fx:id="colNumero" text="Numéro"/>
+            <TableColumn fx:id="colType" text="Type"/>
+            <TableColumn fx:id="colDateExpiration" text="Date d'expiration"/>
+            <TableColumn fx:id="colSolde" text="Solde"/>
+        </columns>
+    </TableView>
+
+    <TextField fx:id="txtNumero" promptText="Numéro"/>
+    <TextField fx:id="txtType" promptText="Type"/>
+    <DatePicker fx:id="dateExpiration" promptText="Date d'expiration"/>
+    <TextField fx:id="txtSolde" promptText="Solde"/>
+
+    <HBox spacing="10">
+        <Button text="Ajouter" fx:id="btnAjouter" onAction="#ajouterCarteBancaire"/>
+        <Button text="Modifier" fx:id="btnModifier" onAction="#modifierCarteBancaire"/>
+        <Button text="Supprimer" fx:id="btnSupprimer" onAction="#supprimerCarteBancaire"/>
+    </HBox>
+</VBox>

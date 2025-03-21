@@ -1,0 +1,23 @@
+.root {
+    -fx-background-color: #0A1931; /* Bleu nuit */
+    -fx-font-family: "Arial";
+}
+
+.label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-background-color: #1E3A8A;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+}
+
+.text-field, .password-field {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
