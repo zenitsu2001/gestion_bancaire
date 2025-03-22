@@ -21,6 +21,10 @@ public class DashboardController {
         loadView("/views/CartesBancaires.fxml", "Gestion des Cartes Bancaires");
     }
 
+    public void loadTransactionssView() {
+        loadView("/views/Transactions.fxml", "Gestion des Transactions");
+    }
+
     private void loadView(String fxml, String title) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxml));

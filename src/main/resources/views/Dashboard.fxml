@@ -11,7 +11,7 @@
             <Label text="Gestion Bancaire" style="-fx-text-fill: white; -fx-font-size: 18px; -fx-font-weight: bold;"/>
             <Button text="Clients" fx:id="btnClients" onAction="#loadClientsView"/>
             <Button text="Cartes Bancaires" fx:id="btnCartes" onAction="#loadCartesBancairesView"/>
-            <Button text="Transactions" fx:id="btnTransactions"/>
+            <Button text="Transactions" fx:id="btnTransactions" onAction="#loadTransactionssView"/>
             <Button text="Déconnexion" fx:id="btnLogout"/>
         </VBox>
     </left>

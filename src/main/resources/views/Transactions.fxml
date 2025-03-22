@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" style="-fx-padding: 20px;" fx:controller="isi.java.gestion_bancaire.controllers.TransactionController" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <!-- Formulaire d'ajout -->
+    <TextField fx:id="txtMontant" promptText="Montant" />
+    <ComboBox fx:id="comboType" promptText="Type de transaction" />
+    <DatePicker fx:id="dateTransaction" promptText="Date de transaction" />
+    <Button text="Ajouter" onAction="#ajouterTransaction" />
+    <Button text="Enregistrer modifications" onAction="#enregistrerModifications" />
+
+    <!-- TableView pour afficher les transactions -->
+    <TableView fx:id="transactionsTable">
+        <columns>
+            <TableColumn text="Montant" fx:id="colMontant" />
+            <TableColumn text="Type" fx:id="colType" />
+            <TableColumn text="Date" fx:id="colDate" />
+            <TableColumn text="Actions" fx:id="colActions" />
+        </columns>
+    </TableView>
+</VBox>
