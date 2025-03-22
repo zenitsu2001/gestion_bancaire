@@ -8,23 +8,26 @@
 <VBox spacing="10" style="-fx-padding: 20px;" xmlns:fx="http://javafx.com/fxml/1" fx:controller="isi.java.gestion_bancaire.controllers.CarteBancaireController">
     <Label text="Gestion des Cartes Bancaires" style="-fx-font-size: 20px; -fx-text-fill: white;"/>
 
-    <TableView fx:id="tableCartesBancaires">
+
+    <TableView fx:id="cartesTable">
         <columns>
-            <TableColumn fx:id="colNumero" text="Numéro"/>
-            <TableColumn fx:id="colType" text="Type"/>
-            <TableColumn fx:id="colDateExpiration" text="Date d'expiration"/>
-            <TableColumn fx:id="colSolde" text="Solde"/>
+            <TableColumn text="Numéro" fx:id="colNumero" />
+            <TableColumn text="Type" fx:id="colType" />
+            <TableColumn text="Date d'expiration" fx:id="colDateExpiration" />
+            <TableColumn text="Solde" fx:id="colSolde" />
+            <TableColumn text="Client" fx:id="colClient" />
         </columns>
     </TableView>
 
-    <TextField fx:id="txtNumero" promptText="Numéro"/>
-    <TextField fx:id="txtType" promptText="Type"/>
+    <ComboBox fx:id="comboClients" promptText="Sélectionnez un client"/>
+
+    <!-- Formulaire pour ajouter une carte bancaire -->
+    <TextField fx:id="txtNumero" promptText="Numéro de la carte"/>
+    <TextField fx:id="txtType" promptText="Type de carte (Visa, Mastercard...)"/>
     <DatePicker fx:id="dateExpiration" promptText="Date d'expiration"/>
-    <TextField fx:id="txtSolde" promptText="Solde"/>
+    <TextField fx:id="txtSolde" promptText="Solde initial"/>
 
     <HBox spacing="10">
         <Button text="Ajouter" fx:id="btnAjouter" onAction="#ajouterCarteBancaire"/>
-        <Button text="Modifier" fx:id="btnModifier" onAction="#modifierCarteBancaire"/>
-        <Button text="Supprimer" fx:id="btnSupprimer" onAction="#supprimerCarteBancaire"/>
     </HBox>
 </VBox>
