@@ -21,6 +21,10 @@ public class Transaction {
     @JoinColumn(name = "carte_id")
     private CarteBancaire carte;
 
+    @ManyToOne
+    @JoinColumn(name = "carte_destinataire_id")
+    private CarteBancaire carteDestinataire;
+
     public double getMontant() {
         return montant;
     }
@@ -59,5 +63,13 @@ public class Transaction {
 
     public void setCarte(CarteBancaire carte) {
         this.carte = carte;
+    }
+
+    public CarteBancaire getCarteDestinataire() {
+        return carteDestinataire;
+    }
+
+    public void setCarteDestinataire(CarteBancaire carteDestinataire) {
+        this.carteDestinataire = carteDestinataire;
     }
 }

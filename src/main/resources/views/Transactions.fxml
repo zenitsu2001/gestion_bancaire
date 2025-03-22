@@ -8,6 +8,8 @@
     <TextField fx:id="txtMontant" promptText="Montant" />
     <ComboBox fx:id="comboType" promptText="Type de transaction" />
     <DatePicker fx:id="dateTransaction" promptText="Date de transaction" />
+    <ComboBox fx:id="comboCarte" promptText="Carte émettrice" />
+    <ComboBox fx:id="comboCarteDestinataire" promptText="Carte destinataire" visible="false" />
     <Button text="Ajouter" onAction="#ajouterTransaction" />
     <Button text="Enregistrer modifications" onAction="#enregistrerModifications" />
 
@@ -17,7 +19,11 @@
             <TableColumn text="Montant" fx:id="colMontant" />
             <TableColumn text="Type" fx:id="colType" />
             <TableColumn text="Date" fx:id="colDate" />
+            <TableColumn text="Carte émettrice" fx:id="colCarte" />
+            <TableColumn text="Carte destinataire" fx:id="colCarteDestinataire" />
             <TableColumn text="Actions" fx:id="colActions" />
         </columns>
     </TableView>
+
+
 </VBox>
