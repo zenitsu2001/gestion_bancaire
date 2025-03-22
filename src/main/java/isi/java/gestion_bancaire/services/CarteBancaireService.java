@@ -26,14 +26,9 @@ public class CarteBancaireService {
         entityManager.merge(carteBancaire);
         entityManager.getTransaction().commit();
     }
-
-    // Supprimer une carte bancaire
-    public void supprimerCarteBancaire(Long id) {
+    public void supprimerCarteBancaire(CarteBancaire carte) {
         entityManager.getTransaction().begin();
-        CarteBancaire carteBancaire = entityManager.find(CarteBancaire.class, id);
-        if (carteBancaire != null) {
-            entityManager.remove(carteBancaire);
-        }
+        entityManager.remove(entityManager.contains(carte) ? carte : entityManager.merge(carte));
         entityManager.getTransaction().commit();
     }
 
